@@ -58,6 +58,16 @@ body{
     height: 25px;
     border-radius: 50%;
 }
+#userIcon:hover{
+    cursor: pointer;
+}
+.userAccounts{
+    position: absolute;
+    top: 55px;
+    margin-left: -45px;
+    /* background: var(--red-primary); */
+    /* font-size: 12px; */
+}
 .achors ul{
     display: flex;
     list-style-type: none;
@@ -99,6 +109,9 @@ body{
     position: relative;
     left: 5px;
 }
+.first-Row{
+    padding-bottom: 150px;
+}
 /* Music */
 #Musics{
     position: relative;
@@ -116,7 +129,7 @@ body{
     justify-content: space-between;
     background: var(--dark-Primary);
     padding: 5px;
-    margin: 8px  10px;
+    margin: 15px  10px;
     border-radius: 5px;
 }
 .musicdetails{
@@ -182,6 +195,7 @@ body{
 .moreOptions ul li, .moreOptions2 ul li{
     padding: 5px;
 }
+
 /* .music-Content-1{
     display: grid;
     grid-template-columns: 1, auto;

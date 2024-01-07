@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google font API -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=Jost&family=Kalam&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+    </style>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Main Content -->
+
+    <div class="content">
+        <!-- Nav-section -->
+        <div class="nav-content" onclick="removeMore()">
+            <h2 class="logo"><small class="headPhonelogo"><i class="fa-solid fa-headphones"></i></small><span>DEV</span>PLAY</h2>
+            <div class="achors">
+                <ul>
+                    <li><i class="fa-solid fa-bell"></i></li>
+                    <li><img src="images/Screenshot_20231228-220348.jpg" alt="" id="userIcon"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Music Sections -->
+        <section id="Musics">
+                <h2 class="titleMusic">Trending Songs</h2>
+                    <div class="first-Row">
+                        <div class="music-Content-1">
+                            <div class="musicdetails">
+                                <span>1.</span>
+                                <img src="images/📱 Self-Development App.jpeg" alt="" id="img-play">
+                                <div class="musicinfo">
+                                    <h4 class="musicTitle">Faded</h4>
+                                    <small>Alan_Walker 2.5k</small>
+                                </div>
+                            </div>
+                            <div class="butons">
+                                <i class="fa-solid fa-circle-play playButton" id="playBtn"></i>
+                                <i class="fa-solid fa-circle-pause pauseButton" id="pauseBtn"></i>
+                            </div>
+                            <div class="musicicons">
+                                <div class="moreOptions">
+                                    <ul>
+                                        <li><a href="audioSongs/Alan_Walker_Faded_(thinkNews.com.ng).mp3" download="">Download</a></li>
+                                        <li>Share</li>
+                                        <li>Remove Song</li>
+                                    </ul>
+                                </div>
+                                <i class="fa-regular fa-heart" id="music-fav"></i>
+                                <i class="fa-solid fa-ellipsis-vertical" id="moreIcon"></i>
+                            </div>
+                        </div>
+                        <!-- Music 2 -->
+                        <div class="music-Content-1">
+                            <div class="musicdetails">
+                                <span>2.</span>
+                                <img src="images/📱 Self-Development App.jpeg" alt="" id="img-play">
+                                <div class="musicinfo">
+                                    <h4 class="musicTitle">Joha</h4>
+                                    <small>Asake 2.7k</small>
+                                </div>
+                            </div>
+                            <div class="butons">
+                                <i class="fa-solid fa-circle-play playButton" id="playBtn2"></i>
+                                <i class="fa-solid fa-circle-pause pauseButton" id="pauseBtn2"></i>
+                            </div>
+                            <div class="musicicons">
+                                <div class="moreOptions2">
+                                    <ul>
+                                        <li><a href="audioSongs/Asake_-_Joha.mp3" download="">Download</a></li>
+                                        <li>Share</li>
+                                        <li>Remove Song</li>
+                                    </ul>
+                                </div>
+                                <i class="fa-regular fa-heart" id="music-fav2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical" id="moreIcon2"></i>
+                            </div>
+                        </div>
+                    </div>
+         
+            
+        </section>
+        <!-- bottom section -->
+        <div class="bottomNavs" onclick="removeMore2()">
+           <div class="home"><i class="fa-solid fa-headphones"></i> <p class="icontitle">Home</p></div>
+           <div class="fav"><i class="fa-regular fa-heart"></i><p class="icontitle">Favorites</p> </div>
+           <div class="library"><i class="fa-solid fa-list-check"></i><p class="icontitle">Library</p></div>
+        </div>
+    </div>
+    
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/9b5c4c6b23.js" crossorigin="anonymous"></script>
+
+    <!-- custom JS -->
+    <script src="js/index.js"></script>
+</body>
+</html>

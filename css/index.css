@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Asap Condensed', sans-serif;
+        font-family: 'Cabin Condensed', sans-serif;
+        font-family: 'Dancing Script', cursive; */
+        font-family: 'Jost', sans-serif;
+        /* font-family: 'Kalam', cursive;
+        font-family: 'Kanit', sans-serif;
+        font-family: 'Noto Sans Display', sans-serif;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-family: 'Slabo 27px', serif;
+        font-family: 'Ubuntu', sans-serif; */
+        color: var(--white-primary);
+}
+:root{
+    --dark-Primary: #010101;
+    --white-primary: #fff;
+    --red-primary: #ff0202;
+    --gray-main: rgb(85, 85, 95);
+}
+body{
+    background: linear-gradient(rgba(10, 10, 40, 0.5), rgba(10, 10, 40, 0.5)), url(../images/bg1.jpeg) no-repeat center center/cover;
+    opacity: .8;
+    min-height: 100vh;
+}
+/* .content{
+    background: var(--dark-Primary);
+
+} */
+/* nav-section - up */
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 15px;
+    background: var(--dark-Primary);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 30px var(--gray-main);
+}
+.logo span{
+    color: var(--red-primary);
+    font-weight: bold;
+}
+.headPhonelogo i{
+    font-size: 30px;
+    margin: 0 5px;
+}
+.achors i{
+    font-size: 20px;
+}
+#userIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.achors ul{
+    display: flex;
+    list-style-type: none;
+}
+.achors ul li{
+    padding: 15px;
+}
+/* bottom section Navs */
+.bottomNavs{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--dark-Primary);
+        box-shadow: 0 0 30px var(--gray-main);
+}
+.bottomNavs div{
+    margin: 7px 0;
+    padding: 5px 0;
+}
+.bottomNavs div i{
+    font-size: 25px;
+    margin: 10px;
+}
+#imguser{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+}
+
+#img-play{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
+}
+/* Music */
+#Musics{
+    position: relative;
+    top: 120px;
+    z-index: -1;
+}
+.titleMusic{
+    margin: 15px;
+    font-size: 2.1rem;
+    font-family: 'Dancing Script', cursive;
+            
+}
+.music-Content-1{
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark-Primary);
+    padding: 5px;
+    margin: 8px  10px;
+    border-radius: 5px;
+}
+.musicdetails{
+    display: flex;
+}
+.musicdetails span{
+    position: relative;
+    top: 10px;
+    font-weight:bolder ;
+}
+.musicinfo{
+    position: relative;
+    left: 15px;
+}
+
+#playBtn, #pauseBtn, #playBtn2, #pauseBtn2{
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+}
+#pauseBtn, #pauseBtn2{
+    display: none;
+}
+#music-fav,#music-fav2,  #moreIcon, #moreIcon2 {
+    font-size: 20px;
+        position: relative;
+        top: 10px;
+        margin: 0 5px;
+}
+#music-fav:hover, #music-fav2:hover, #moreIcon:hover, #moreIcon2:hover{
+    cursor: pointer;
+}
+.moreOptions, .moreOptions2{
+    display: none;
+    margin-right: 10px;
+    background: var(--gray-main);
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 0 20px var(--dark-Primary);
+    animation-name: navAnime;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        transition: all .5s ease-in;
+        margin-top: 10px;
+}
+@keyframes navAnime {
+    0% {
+        transform: scale(0);
+    }
+
+    50%,
+    100% {
+        transform: scale(1.0, 1.0);
+    }
+}
+.moreOptions ul, .moreOptions2 ul{
+    list-style-type: none;
+}
+.moreOptions ul li, .moreOptions2 ul li{
+    padding: 5px;
+}
+/* .music-Content-1{
+    display: grid;
+    grid-template-columns: 1, auto;
+} */
+/* .bottomNavs div p{
+
+} */
+
+/* Musics Section */
+
+/* .titleMusic{
+    margin: 15px 10px;
+    font-size: 1.8rem;
+}
+.m1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--dark-Primary);
+    margin: 0 10px;
+    border-radius: 5px;
+}
+.music-content1{
+    display: grid;
+    grid-template-columns: 1, auto;
+    row-gap: 15px;
+    margin-bottom: 200vh;
+    /* background: var(--red-primary); 
+    /* margin: 20px;
+}  */
+
+/* .m1Content{
+    display: flex;
+}
+.m1info{
+    padding: 0 25px;
+}
+.musicNumber{
+    position: relative;
+    top: 10px;
+    font-weight: bolder;
+}
+.playButton, .pauseButton{
+    font-size: 27px;
+    margin: 10px 0;
+}
+#pauseIcon{
+    display: none;
+}
+.m1icons{
+    padding: 0 10px;
+}
+.m1icons i{
+    padding: 5px;
+    font-size: 20px;
+}
+.PlayBtn, .PauseBtn, .playButton2, .pauseButton2{
+    padding: 10px;
+    border: none;
+    background: transparent;
+}
+.PauseBtn, #pauseIcon1{
+    display: none;
+}
+.first-Row{
+    padding-bottom: 150px;
+}  */
+
+/* @media (min-width: 0) and (max-width: 750px) {
+   .first-Row{
+    display: flex;
+    overflow-x: scroll;
+    height: 350px;
+   }
+   .fa-heart{
+    position: relative;
+    left: 10px;
+   }
+   .fa-ellipsis-vertical{
+    position: relative;
+        left: 15px;
+   }
+} */
+
+

@@ -1,107 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPlay - Home</title>
     <!-- google font API -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=Jost&family=Kalam&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=Jost&family=Kalam&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap");
     </style>
-
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a0d92fbbd6.js"
+      crossorigin="anonymous"></script>
+    <!-- W3 School Icons Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- custom css -->
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <!-- Main Content -->
 
     <div class="content">
-        <!-- Nav-section -->
-        <div class="nav-content" onclick="removeMore()">
-            <h2 class="logo"><small class="headPhonelogo"><i class="fa-solid fa-headphones"></i></small><span>DEV</span>PLAY</h2>
-            <div class="achors">
-                <ul>
-                    <li><i class="fa-solid fa-bell"></i></li>
-                    <li><img src="images/Screenshot_20231228-220348.jpg" alt="" id="userIcon">
-                        <span class="userAccounts">Accounts</span>
-                    </li>
-                </ul>
-            </div>
+      <!-- Nav-section -->
+      <div class="nav-content">
+        <h2 class="logo">
+          <small class="headPhonelogo"
+            ><i class="fa-solid fa-headphones"></i></small
+          ><span>DEV</span>PLAY
+        </h2>
+        <div class="achors">
+          <ul>
+            <li><i class="fa-solid fa-bell" id="bellIcon"></i></li>
+            <li>
+              <i class="fa fa-user-circle-o" id="userDisplayicon"></i>
+              <span class="userAccounts">Accounts</span>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Music Sections -->
-        <section id="Musics">
-                <h2 class="titleMusic">Trending Songs</h2>
-                    <div class="first-Row">
-                        <div class="music-Content-1">
-                            <div class="musicdetails">
-                                <span>1.</span>
-                                <img src="images/📱 Self-Development App.jpeg" alt="" id="img-play">
-                                <div class="musicinfo">
-                                    <h4 class="musicTitle">Faded</h4>
-                                    <small>Alan_Walker 2.5k</small>
-                                </div>
-                            </div>
-                            <div class="butons">
-                                <i class="fa-solid fa-circle-play playButton" id="playBtn"></i>
-                                <i class="fa-solid fa-circle-pause pauseButton" id="pauseBtn"></i>
-                            </div>
-                            <div class="musicicons">
-                                <div class="moreOptions">
-                                    <ul>
-                                        <li><a href="audioSongs/Alan_Walker_Faded_(thinkNews.com.ng).mp3" download="">Download</a></li>
-                                        <li>Share</li>
-                                        <li>Remove Song</li>
-                                    </ul>
-                                </div>
-                                <i class="fa-regular fa-heart" id="music-fav"></i>
-                                <i class="fa-solid fa-ellipsis-vertical" id="moreIcon"></i>
-                            </div>
-                        </div>
-                        <!-- Music 2 -->
-                        <div class="music-Content-1">
-                            <div class="musicdetails">
-                                <span>2.</span>
-                                <img src="images/self1.jpeg" alt="" id="img-play">
-                                <div class="musicinfo">
-                                    <h4 class="musicTitle">Joha</h4>
-                                    <small>Asake 2.7k</small>
-                                </div>
-                            </div>
-                            <div class="butons">
-                                <i class="fa-solid fa-circle-play playButton" id="playBtn2"></i>
-                                <i class="fa-solid fa-circle-pause pauseButton" id="pauseBtn2"></i>
-                            </div>
-                            <div class="musicicons">
-                                <div class="moreOptions2">
-                                    <ul>
-                                        <li><a href="audioSongs/Asake_-_Joha.mp3" download="">Download</a></li>
-                                        <li>Share</li>
-                                        <li>Remove Song</li>
-                                    </ul>
-                                </div>
-                                <i class="fa-regular fa-heart" id="music-fav2"></i>
-                                <i class="fa-solid fa-ellipsis-vertical" id="moreIcon2"></i>
-                            </div>
-                        </div>
-                    </div>
-         
-            
-        </section>
-        <!-- bottom section -->
-        <div class="bottomNavs" onclick="removeMore2()">
-           <div class="home"><i class="fa-solid fa-headphones"></i> <p class="icontitle">Home</p></div>
-           <div class="fav"><i class="fa-regular fa-heart"></i><p class="icontitle">Favorites</p> </div>
-           <div class="library"><i class="fa-solid fa-list-check"></i><p class="icontitle">Library</p></div>
+      <!-- Music Sections -->
+      <div class="musicStart">
+        <div class="firstRow">
+          <h2 class="title">Trending Musics</h2>
+          <div class="music-Content">
+            <div class="aboutMusic">
+              <span class="number">1.</span>
+              <img
+                src="images/Listen to the Best Podcasts, For Free - Spreaker.jpeg"
+                alt="music Img"
+                id="MusicImgID" />
+              <div class="faded">
+                <h3 class="musicTitle">Faded</h3>
+                <small class="musicAuthor">Alan_Walker 2.5k</small>
+              </div>
+            </div>
+            <div class="playButtons">
+              <i class="fa-solid fa-circle-play" id="playIcon"></i>
+              <i class="fa-solid fa-circle-pause" id="pauseIcon"></i>
+            </div>
+            <div class="musicInfos">
+              <i class="fa-regular fa-heart" id="heart"></i>
+              <i class="fa-solid fa-ellipsis-vertical" id="dots"></i>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- bottom section -->
+      <div class="bottomNavs">
+        <div class="home">
+          <i class="fa-solid fa-headphones"></i>
+          <p class="icontitle">Home</p>
+        </div>
+        <div class="fav">
+          <i class="fa-regular fa-heart"></i>
+          <p class="icontitle">Favorites</p>
+        </div>
+        <div class="library">
+          <i class="fa-solid fa-list-check"></i>
+          <p class="icontitle">Library</p>
+        </div>
+      </div>
     </div>
-    
 
     <!-- font-awesome -->
-    <script src="https://kit.fontawesome.com/9b5c4c6b23.js" crossorigin="anonymous"></script>
 
     <!-- custom JS -->
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>

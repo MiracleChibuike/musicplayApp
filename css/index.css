@@ -22,24 +22,20 @@
 }
 body{
     background: linear-gradient(rgba(10, 10, 40, 0.5), rgba(10, 10, 40, 0.5)), url(../images/bg1.jpeg) no-repeat center center/cover;
-    opacity: .8;
     min-height: 100vh;
+    opacity: .8;
 }
-/* .content{
-    background: var(--dark-Primary);
 
-} */
-/* nav-section - up */
 .nav-content{
     display: flex;
     justify-content: space-between;
     height: 90px;
     padding: 15px;
     background: var(--dark-Primary);
-    position: fixed;
+    /* position: fixed;
     top: 0;
     right: 0;
-    left: 0;
+    left: 0; */
     box-shadow: 0 0 30px var(--gray-main);
 }
 .logo span{
@@ -50,23 +46,29 @@ body{
     font-size: 30px;
     margin: 0 5px;
 }
-.achors i{
-    font-size: 20px;
-}
-#userIcon{
+
+/* #userIcon{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-}
+} */
 #userIcon:hover{
     cursor: pointer;
 }
 .userAccounts{
     position: absolute;
     top: 55px;
-    margin-left: -45px;
+    right: 17px;
     /* background: var(--red-primary); */
-    /* font-size: 12px; */
+    font-size: 12px;
+}
+
+#userDisplayicon, #bellIcon{
+    font-size: 21px;
+}
+#userDisplayicon:hover{
+    cursor: pointer;
+    transition: .7s ease;
 }
 .achors ul{
     display: flex;
@@ -94,6 +96,11 @@ body{
     font-size: 25px;
     margin: 10px;
 }
+.bottomNavs div i:hover{
+    color: var(--red-primary);
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
 #imguser{
     width: 50px;
     height: 50px;
@@ -113,7 +120,69 @@ body{
     padding-bottom: 150px;
 }
 /* Music */
-#Musics{
+.musicStart{
+    margin: 40px 0;
+}
+.title{
+    margin: 25px 15px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+.music-Content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    background: var(--dark-Primary);
+    padding: 10px;
+    border-radius: 7px;
+}
+.aboutMusic{
+    display: flex;
+}
+.number{
+    margin-top: 10px;
+    font-weight: bold;
+}
+#MusicImgID{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.faded{
+    margin-left: 15px;
+}
+.playButtons i{
+        font-size: 20px;
+        margin: 13px 0;
+        animation-name: playAnime;
+        animation-iteration-count: 1;
+        animation-duration: 1.3s;
+}
+@keyframes playAnime {
+    0%{
+        font-size: 0;
+    }
+    50%, 100%{
+        font-size: 20px;
+        transition: .4s ease;
+    }
+}
+.musicInfos i{
+    font-size: 20px;
+    margin: 13px 5px;
+}
+.musicInfos i:hover{
+    cursor: pointer;
+}
+#pauseIcon{
+    display: none;
+}
+
+
+
+
+/* #Musics{
     position: relative;
     top: 120px;
     z-index: -1;
@@ -131,6 +200,7 @@ body{
     padding: 5px;
     margin: 15px  10px;
     border-radius: 5px;
+    z-index: 100;
 }
 .musicdetails{
     display: flex;
@@ -150,9 +220,7 @@ body{
     position: relative;
     top: 10px;
 }
-#pauseBtn, #pauseBtn2{
-    display: none;
-}
+
 #music-fav,#music-fav2,  #moreIcon, #moreIcon2 {
     font-size: 20px;
         position: relative;
@@ -194,90 +262,5 @@ body{
 }
 .moreOptions ul li, .moreOptions2 ul li{
     padding: 5px;
-}
-
-/* .music-Content-1{
-    display: grid;
-    grid-template-columns: 1, auto;
 } */
-/* .bottomNavs div p{
-
-} */
-
-/* Musics Section */
-
-/* .titleMusic{
-    margin: 15px 10px;
-    font-size: 1.8rem;
-}
-.m1{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background: var(--dark-Primary);
-    margin: 0 10px;
-    border-radius: 5px;
-}
-.music-content1{
-    display: grid;
-    grid-template-columns: 1, auto;
-    row-gap: 15px;
-    margin-bottom: 200vh;
-    /* background: var(--red-primary); 
-    /* margin: 20px;
-}  */
-
-/* .m1Content{
-    display: flex;
-}
-.m1info{
-    padding: 0 25px;
-}
-.musicNumber{
-    position: relative;
-    top: 10px;
-    font-weight: bolder;
-}
-.playButton, .pauseButton{
-    font-size: 27px;
-    margin: 10px 0;
-}
-#pauseIcon{
-    display: none;
-}
-.m1icons{
-    padding: 0 10px;
-}
-.m1icons i{
-    padding: 5px;
-    font-size: 20px;
-}
-.PlayBtn, .PauseBtn, .playButton2, .pauseButton2{
-    padding: 10px;
-    border: none;
-    background: transparent;
-}
-.PauseBtn, #pauseIcon1{
-    display: none;
-}
-.first-Row{
-    padding-bottom: 150px;
-}  */
-
-/* @media (min-width: 0) and (max-width: 750px) {
-   .first-Row{
-    display: flex;
-    overflow-x: scroll;
-    height: 350px;
-   }
-   .fa-heart{
-    position: relative;
-    left: 10px;
-   }
-   .fa-ellipsis-vertical{
-    position: relative;
-        left: 15px;
-   }
-} */
-
 

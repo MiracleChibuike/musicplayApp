@@ -21,7 +21,43 @@ playFadedMusic.addEventListener("click", ()=>{
   })
 
 })
+// For displaying the music options on click
+var faded_Dots = document.getElementById("dots");
+var faded_Options = document.querySelector(".more");
+faded_Dots.addEventListener("click", ()=>{
+  if (faded_Options.style.display = "none") {
+    faded_Options.style.display = "block";
 
+  }
+ 
+  // console.log("More is here")
+})
+var closeOptions = document.getElementById("closeMore");
+closeOptions.addEventListener("click", ()=>{
+    faded_Options.style.display = "none"
+  // console.log("I can remove it")
+})
+var shareAudio = document.getElementById("Share");
+shareAudio.addEventListener("click", () => {
+  // check if the Web Share APi file is sharable
+  if (navigator.share) {
+    const fadedAudioFile = {
+      title: "Faded Alan_Walker",
+      text: "Listen this Audio File Faded by Alan_Walker \n https://www.boomplay.com/songs/14795995",
+    };
+
+    // Call the share API method
+    navigator.share(fadedAudioFile)
+    .then( () => console.log("shared successfully"))
+    .catch((error) => console.error("Error sharing:", error));
+  } else{
+    // Fallback for browsers that do not support the Web Share API
+    alert("web share API is not supported in this browser")
+  }
+})
+
+
+// For playing Music 2
 
 
 

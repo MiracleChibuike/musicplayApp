@@ -21,6 +21,33 @@ playFadedMusic.addEventListener("click", ()=>{
   })
 
 })
+// For adding musics to favorite
+const fav1 = document.getElementById("heart");
+var isFavorite = false;
+
+fav1.addEventListener("click", () => {
+  if (!isFavorite) {
+    // Add to favorites
+    fav1.style.color = "red";
+    alert("Faded added to favorites list");
+  } else {
+    // Remove from favorites
+    fav1.style.color = "white";
+    alert("Faded removed from favorites list");
+  }
+
+  isFavorite = !isFavorite;
+
+  fav1.style.transition = ".7s ease";
+  fav1.style.transform = "scale(0.9) rotate(360deg)";
+  fav1.style.fontSize = "25px";
+
+  setTimeout(function () {
+    fav1.style.transform = "none";
+    fav1.style.fontSize = "20px";
+  }, 500);
+});
+
 // For displaying the music options on click
 var faded_Dots = document.getElementById("dots");
 var faded_Options = document.querySelector(".more");
@@ -43,7 +70,7 @@ shareAudio.addEventListener("click", () => {
   if (navigator.share) {
     const fadedAudioFile = {
       title: "Faded Alan_Walker",
-      text: "Listen this Audio File Faded by Alan_Walker \n https://www.boomplay.com/songs/14795995",
+      text: "Listen to this Audio File Faded by Alan_Walker \n https://www.boomplay.com/songs/14795995",
     };
 
     // Call the share API method
@@ -58,6 +85,135 @@ shareAudio.addEventListener("click", () => {
 
 
 // For playing Music 2
+
+var joha = new Audio("audioSongs/Asake_-_Joha.mp3");
+joha.load();
+joha.volume = 0.7;
+let play_Joha = document.getElementById("playIcon2");
+let pause_Joha = document.getElementById("pauseIcon2");
+play_Joha.addEventListener("click", ()=>{
+  joha.play();
+  if (pause_Joha.style.display = "none") {
+    pause_Joha.style.display = "block";
+    play_Joha.style.display = "none"
+  };
+  pause_Joha.addEventListener("click", () => {
+    joha.pause();
+    pause_Joha.style.display = "none";
+    play_Joha.style.display = "block"
+  })
+});
+// For adding joha to favs;
+var fav2 = document.getElementById("heart2");
+var isFavorite = false;
+
+fav2.addEventListener("click", () => {
+  if (!isFavorite) {
+    // Add to favorites
+    fav2.style.color = "red";
+    alert("Joha added to favorites list");
+  } else {
+    // Remove from favorites
+    fav2.style.color = "white";
+    alert("Joha removed from favorites list");
+  }
+
+  isFavorite = !isFavorite;
+
+  fav2.style.transition = ".7s ease";
+  fav2.style.transform = "scale(0.9) rotate(360deg)";
+  fav2.style.fontSize = "25px";
+
+  setTimeout(function () {
+    fav2.style.transform = "none";
+    fav2.style.fontSize = "20px";
+  }, 500);
+});
+
+// Let us display joha music options on dots click
+var joha_Dots = document.getElementById("dots2");
+var joha_Options = document.querySelector(".more2");
+joha_Dots.addEventListener("click", ()=>{
+  if (joha_Options.style.display = "none") {
+    joha_Options.style.display = "block";
+  }
+})
+
+var joha_Options_close = document.getElementById("closeMore2");
+joha_Options_close.addEventListener("click", () => {
+  joha_Options.style.display = "none"
+})
+
+// Let us share Joha Music File
+var joha_Share = document.getElementById("shareJoha");
+joha_Share.addEventListener("click", ()=>{
+  if (navigator.share) {
+    const JohaAudioFile = {
+      title: "Joha by Asake",
+      text: "Listen to this awesome music by Asake \n  https://open.spotify.com/track/5UwxpuGHkwiojKDaPC5ZNu?autoplay=true",
+    };
+    // Callthe API method
+    navigator
+      .share(JohaAudioFile)
+      .then(() => console.log("shared successfully"))
+      .catch((error) => console.error("Error sharing:", error));
+  } else {
+    // Fallback for browsers that do not support the Web Share API
+    alert("web share API is not supported in this browser");
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -46,6 +46,9 @@ body{
     font-size: 30px;
     margin: 0 5px;
 }
+#bellIcon{
+    font-size: 17px;
+}
 
 /* #userIcon{
     width: 25px;
@@ -63,7 +66,7 @@ body{
     font-size: 12px;
 }
 
-#userDisplayicon, #bellIcon{
+#userDisplayicon{
     font-size: 21px;
 }
 #userDisplayicon:hover{
@@ -164,7 +167,6 @@ body{
         font-size: 0;
     }
     50%, 100%{
-        font-size: 23px;
         transition: .4s ease;
     }
 }
@@ -175,10 +177,11 @@ body{
 .musicInfos i:hover{
     cursor: pointer;
 }
-#pauseIcon{
+#pauseIcon, #pauseIcon2{
     display: none;
 }
-.more{
+
+.more, .more2{
     display: none;
     background: var(--gray-main);
     width: 100px;
@@ -204,25 +207,26 @@ body{
         transform: scale(1.0, 1.0);
     }
 }
-.more ul{
+.more ul, .more2 ul{
     list-style-type: none;
 }
-.more ul li{
+.more ul li, .more2 ul li{
     padding: 5px;
 }
-.more ul li:hover{
+.more ul li:hover, .more2 ul li:hover{
     cursor: pointer;
     background: var(--dark-Primary);
     transition: .5s ease-in;
     border-radius: 7px;
 }
-#closeMore{
+#closeMore, #closeMore2{
     position: absolute;
     z-index: 100;
     top: -20px;
     left: 80px;
     font-size: 20px;
 }
+
 
 
 

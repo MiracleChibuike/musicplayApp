@@ -46,47 +46,54 @@
         <div class="accounts">
           <div class="formCreateAccount">
             <i class="fa-solid fa-xmark" id="removeForm"></i>
-            <i class="fa-solid fa-user" id="user-Form-ID-Icon"></i>
-           <div class="formCreate">
-            <h2>Welcome, Create An Account With Us</h2>
-            <form action="#" autocomplete="on">
-              <div class="NameId">
-                <i class="fa-regular fa-user"></i>
-                <input type="text" id="NameUser" placeholder="Your Name" required autocomplete="name">
+              <div class="parentFormCreate">
+                              <!-- <h2 class="wecomeHeading">Welcome, <br> Create An Account With Us</h2> -->
+                              
+                              <div class="formCreate">
+                                <!-- <i class="fa-solid fa-user" id="user-Form-ID-Icon"></i> -->
+                                <form action="#" autocomplete="on">
+                                  <div class="NameId">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" id="NameUser" placeholder="Your Name" required autocomplete="name">
+                                  </div>
+                                  <!-- for Email Input -->
+                                  <div class="EmailId">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" id="EmailUser" placeholder="Your Email" required autocomplete="email">
+                                  </div>
+                                  <!-- for password input -->
+                                  <div class="passwordId">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" id="passwordUser" placeholder="Create Password" required autocomplete="new-password">
+                                  </div>
+                                  <!-- For CreateAcoount Button - to be designed -->
+                                  <div class="SignUpBTN">
+                                    <button type="submit" id="SignupButton">Sign Up</button>
+                                  </div>
+                                  <!-- To re-direct to login page if account already exsit -->
+                                  <div class="IHvaeAccount">
+                                    <p class="AlreadyCreated">Already Have Account? Log in</p>
+                                  </div>
+                                </form>
+                              </div>
               </div>
-              <!-- for Email Input -->
-              <div class="EmailId">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" id="EmailUser" placeholder="Your Email" required autocomplete="email">
-              </div>
-              <!-- for password input -->
-              <div class="passwordId">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" id="passwordUser" placeholder="Create Password" required autocomplete="new-password">
-              </div>
-              <!-- For CreateAcoount Button - to be designed -->
-              <div class="SignUpBTN">
-                <button type="submit" id="SignupButton">Sign Up</button>
-              </div>
-              <!-- To re-direct to login page if account already exsit -->
-              <div class="IHvaeAccount">
-                <p>Already Have Account? Log in</p>
-              </div>
-            </form>
-           </div>
             <!-- For Login If user Already Exist -->
-            <div class="loginForm">
-              <!-- <h2>Wecome back, Log In</h2> -->
-              <!-- <i class="fa-solid fa-user"></i> -->
-              <form action="">
-                <div class="emailOld">
-                  <i class="fa-solid fa-user"></i>
-                  <input type="email" name="" id="old-User-Email" placeholder="Email ID" required>
-                </div>
-                <div class="passwordOld">
-                  <i class="fa-solid fa-lock"></i>
-                    <input type="password"  id="old-User-Password" placeholder="Password ID" required>
-                </div>
+
+            <div>
+              <!-- <h2 class="loginHeading">Welcome back, <br> Log In</h2> -->
+              
+           <div class="parentLoginForm">
+            <i class="fa-solid fa-user" id="userLoginIcon"></i>
+              <div class="loginForm">
+                <form action="" autocomplete="on">
+                  <div class="emailOld">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" name="" id="old-User-Email" placeholder="Email ID" required>
+                  </div>
+                  <div class="passwordOld">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="old-User-Password" placeholder="Password ID" required>
+                  </div>
                   <!-- Forgot passcode and rember me field -->
                   <div class="userStrict">
                     <div class="rememberuser">
@@ -98,9 +105,14 @@
                     </div>
                   </div>
                   <div class="loginBTN">
-                    <button type="submit">LOGIN</button>
+                    <button type="submit" id="loginButton">LOGIN</button>
                   </div>
-              </form>
+                  <div class="createAccountAid">
+                    <p class="CreateNewUser">Dont't have an account? Create Account</p>
+                  </div>
+                </form>
+              </div>
+           </div>
             </div>
           </div>
         </div>

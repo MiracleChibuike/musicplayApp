@@ -1,4 +1,12 @@
 
+
+let accountsIcon = document.getElementById("userDisplayicon");
+let accountsContainer = document.querySelector(".accounts");
+accountsIcon.addEventListener("click", ()=>{
+  if (accountsContainer.style.display = "none") {
+    accountsContainer.style.display = "block"
+  }
+})
 // Working with form validation on creating account
 var accountContent = document.querySelector(".accounts");
 var userNameDisplay = document.querySelector(".userAccounts");
@@ -20,17 +28,49 @@ signUpBtn.addEventListener("click", (e)=>{
     alert("Please create a password");
     e.preventDefault()
   }else{
+            alert(`You are now Logged in as ${userName.value}`);
         userNameDisplay.innerHTML = userName.value;
-        alert(`Logged in as ${userName.value}`);
-        // accountContent.style.display = "none"
+        accountContent.style.display = "none"
+  }
+});
+var loginBTn = document.getElementById("loginButton");
+var OlduserE_Mail = document.getElementById("old-User-Email");
+var old_User_Passcode = document.getElementById("old-User-Password");
+loginBTn.addEventListener("click", (e)=>{
+  if (OlduserE_Mail.value == "") {
+    alert("Please enter your Email");
+    e.preventDefault()
+  }else if (old_User_Passcode.value == "") {
+    alert("Cannot sign in without a password");
+    e.preventDefault()
+  }else{
+        alert(`Welcome back ${OlduserE_Mail.value}`);
+    userNameDisplay.textContent = OlduserE_Mail.value;
+            accountContent.style.display = "none";
+
   }
 })
-
 // To remove the Form Container
 var remove_Form_Icon = document.getElementById("removeForm");
 remove_Form_Icon.addEventListener("click", ()=>{
   accountContent.style.display = "none"
 })
+
+// To display Login Form on click
+var createFormContainer = document.querySelector(".parentFormCreate");
+let login_Container = document.querySelector(".parentLoginForm");
+var user_Exists = document.querySelector(".AlreadyCreated");
+user_Exists.addEventListener("click", ()=>{
+  login_Container.style.display = "block";
+  createFormContainer.style.display = "none"
+});
+
+// To show the Create Account Form
+var createuser = document.querySelector(".CreateNewUser");
+ createuser.addEventListener("click", ()=>{
+   login_Container.style.display = "none";
+   createFormContainer.style.display = "block";
+ })
 // signUpBtn.addEventListener("click", (e)=>{
 //    userNameDisplay.innerHTML = userName.value;
 //    alert(`Logged in as ${userName.value}`);

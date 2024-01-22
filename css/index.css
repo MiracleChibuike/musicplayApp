@@ -19,6 +19,9 @@
     --white-primary: #fff;
     --red-primary: #ff0202;
     --gray-main: rgb(85, 85, 95);
+    --gray-light: rgb(234, 238, 240);
+    --Blue-initial-semi: rgb(8, 4, 91); 
+    --Blue-initial-second: rgb(178, 183, 192);
 }
 body{
     background: linear-gradient(rgba(10, 10, 40, 0.5), rgba(10, 10, 40, 0.5)), url(../images/bg1.jpeg) no-repeat center center/cover;
@@ -79,6 +82,130 @@ body{
 }
 .achors ul li{
     padding: 15px;
+}
+/* Styling for accountssection - login/sign up */
+.accounts{
+    position: absolute;
+    left: 90vh;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+        background: linear-gradient(to left, blue, rgb(241, 193, 106));
+    /* background: rgb(48, 48, 205); */
+}
+.formCreate{
+    background: var(--gray-light);
+    padding: 25px 20px;
+    border-radius: 8px;
+    display: none;
+}
+.loginForm{
+    background: var(--gray-light);
+        padding: 25px 20px;
+        border-radius: 8px;
+}
+/* remove Icon */
+.fa-xmark{
+    font-size: 25px;
+    background: var(--gray-main);
+    color: var(--white-primary);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 8px 10px;
+    position: relative;
+    left: 385px;
+    bottom: 40px;
+    box-shadow: 0 0 30px var(--dark-Primary);
+}
+.fa-xmark:hover{
+    color: var(--white-primary);
+    background: var(--red-primary);
+    transition: .3s ease;
+    cursor: pointer;
+}
+#user-Form-ID-Icon{
+    font-size: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: var(--Blue-initial-semi);
+    padding: 10px 18px;
+    position: relative;
+    left: 150px;
+    top: 30px;
+
+}
+.NameId, .EmailId, .passwordId, .emailOld, .passwordOld{
+    margin: 25px;
+}
+.NameId i,
+.EmailId i,
+.passwordId i{
+    background: var(--Blue-initial-semi);
+    padding: 11.9px 8px;
+    position: relative;
+    left: 5px;
+}
+#NameUser, #EmailUser, #passwordUser, #old-User-Email, #old-User-Password{
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: var(--dark-Primary);
+    background: var(--Blue-initial-second);
+    font-weight: bold;
+    /* font-size: 15px; */
+}
+::-webkit-input-placeholder{
+    /* color: var(--red-primary); */
+    color: var(--gray-main);
+    font-size: 14px;
+}
+.SignUpBTN{
+    text-align: center;
+}
+#SignupButton{
+    padding: 8px 20px;
+    background: var(--Blue-initial-semi);
+    box-shadow: 0 0 30px  var(--dark-Primary);
+    border: none;
+    color: var(--white-primary);
+    font-weight: bolder;
+    border-radius: 7px;
+    transition: .7s ease-in-out;
+}
+
+#SignupButton:hover{
+    background: var(--gray-light);
+    cursor: pointer;
+    color: var(--Blue-initial-semi);
+    transition: .5s ease;
+}
+.IHvaeAccount{
+        text-align: center;
+        margin: 10px 0;
+}
+.IHvaeAccount p{
+    padding: 5px;
+    background: transparent;
+    color: var(--dark-Primary);
+    font-weight: bold;
+    /* border: none; */
+}
+.IHvaeAccount p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transition: .3s ease-in-out;
+}
+/* #SignupButton:active{
+        background: var(--red-primary);
+} */
+
+
+/* for login Form */
+.loginForm{
+    /* display: none; */
 }
 /* bottom section Navs */
 .bottomNavs{

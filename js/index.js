@@ -1,3 +1,42 @@
+
+// Working with form validation on creating account
+var accountContent = document.querySelector(".accounts");
+var userNameDisplay = document.querySelector(".userAccounts");
+// Getting the values of all our form inputs
+var userName = document.getElementById("NameUser");
+var userEmail = document.getElementById("EmailUser");
+var user_password = document.getElementById("passwordUser");
+// For button sign up
+var signUpBtn = document.getElementById("SignupButton");
+
+signUpBtn.addEventListener("click", (e)=>{
+  if (userName.value == "") {
+    alert("Plaese enter your name");
+    e.preventDefault()
+  }else if (userEmail.value == "") {
+    alert("Plaese enter your email");
+        e.preventDefault();
+  }else if (user_password.value == "") {
+    alert("Please create a password");
+    e.preventDefault()
+  }else{
+        userNameDisplay.innerHTML = userName.value;
+        alert(`Logged in as ${userName.value}`);
+        // accountContent.style.display = "none"
+  }
+})
+
+// To remove the Form Container
+var remove_Form_Icon = document.getElementById("removeForm");
+remove_Form_Icon.addEventListener("click", ()=>{
+  accountContent.style.display = "none"
+})
+// signUpBtn.addEventListener("click", (e)=>{
+//    userNameDisplay.innerHTML = userName.value;
+//    alert(`Logged in as ${userName.value}`);
+//    accountContent.style.display = "none";
+// })
+
 // For Playing Music 1
 var Faded = new Audio("audioSongs/Alan_Walker_Faded_(thinkNews.com.ng).mp3");
 Faded.load();
@@ -138,7 +177,7 @@ joha_Dots.addEventListener("click", ()=>{
     joha_Options.style.display = "block";
   }
 })
-
+// To close Joha_Options
 var joha_Options_close = document.getElementById("closeMore2");
 joha_Options_close.addEventListener("click", () => {
   joha_Options.style.display = "none"

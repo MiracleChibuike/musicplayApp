@@ -42,6 +42,68 @@
             </li>
           </ul>
         </div>
+        <!-- Addition of a Sign Up/Login Section -->
+        <div class="accounts">
+          <div class="formCreateAccount">
+            <i class="fa-solid fa-xmark" id="removeForm"></i>
+            <i class="fa-solid fa-user" id="user-Form-ID-Icon"></i>
+           <div class="formCreate">
+            <h2>Welcome, Create An Account With Us</h2>
+            <form action="#" autocomplete="on">
+              <div class="NameId">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" id="NameUser" placeholder="Your Name" required autocomplete="name">
+              </div>
+              <!-- for Email Input -->
+              <div class="EmailId">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="EmailUser" placeholder="Your Email" required autocomplete="email">
+              </div>
+              <!-- for password input -->
+              <div class="passwordId">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="passwordUser" placeholder="Create Password" required autocomplete="new-password">
+              </div>
+              <!-- For CreateAcoount Button - to be designed -->
+              <div class="SignUpBTN">
+                <button type="submit" id="SignupButton">Sign Up</button>
+              </div>
+              <!-- To re-direct to login page if account already exsit -->
+              <div class="IHvaeAccount">
+                <p>Already Have Account? Log in</p>
+              </div>
+            </form>
+           </div>
+            <!-- For Login If user Already Exist -->
+            <div class="loginForm">
+              <!-- <h2>Wecome back, Log In</h2> -->
+              <!-- <i class="fa-solid fa-user"></i> -->
+              <form action="">
+                <div class="emailOld">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="email" name="" id="old-User-Email" placeholder="Email ID" required>
+                </div>
+                <div class="passwordOld">
+                  <i class="fa-solid fa-lock"></i>
+                    <input type="password"  id="old-User-Password" placeholder="Password ID" required>
+                </div>
+                  <!-- Forgot passcode and rember me field -->
+                  <div class="userStrict">
+                    <div class="rememberuser">
+                      <input type="checkbox" id="rememberUser">
+                      <span>Remember Me</span>
+                    </div>
+                    <div class="forgotPasscode">
+                      <p>Forgot Password?</p>
+                    </div>
+                  </div>
+                  <div class="loginBTN">
+                    <button type="submit">LOGIN</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Music Sections -->
@@ -57,7 +119,7 @@
                 id="MusicImgID" />
               <div class="faded">
                 <h4 class="musicTitle">Faded</h4>
-                <small class="musicAuthor">Alan_Walker 2.5k</small>
+                <small class="musicAuthor">Alan_Walker 3:26</small>
               </div>
             </div>
             <div class="playButtons">
@@ -84,7 +146,7 @@
                     <img src="images/Download premium png of Beautiful woman mockup png listening to music through headphones digital device by McKinsey  about headphones, listening to music, african, woman, and people listening to music 3395108.jpeg" alt="music Img" id="MusicImgID" />
                     <div class="faded">
                         <h4 class="musicTitle">Joha</h4>
-                        <small class="musicAuthor">Asake 2.1k</small>
+                        <small class="musicAuthor">Asake 2:28</small>
                     </div>
                 </div>
                 <div class="playButtons">

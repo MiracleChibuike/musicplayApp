@@ -96,6 +96,7 @@ body{
     display: none;
     transition: all .7s ease;
     border-radius: 10px;
+    z-index: 100;
 }
 
 .parentFormCreate{
@@ -323,6 +324,7 @@ body{
 /* Music */
 .musicStart{
     margin: 40px 0;
+    padding-bottom: 100px;
 }
 .title{
     margin: 25px 15px;
@@ -344,11 +346,21 @@ body{
     margin-top: 10px;
     font-weight: bold;
 }
-#MusicImgID{
+.rotate {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#MusicImgID, #MusicImgID2, #MusicImgID3, #MusicImgID4, #MusicImgID5{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-left: 5px;
+    /* z-index: 100; */
 }
 .faded{
     margin-left: 15px;
@@ -375,11 +387,11 @@ body{
 .musicInfos i:hover{
     cursor: pointer;
 }
-#pauseIcon, #pauseIcon2{
+#pauseIcon, #pauseIcon2, #pauseIcon3, #pauseIcon4, #pauseIcon5{
     display: none;
 }
 
-.more, .more2{
+.more, .more2, .more3, .more4, .more5{
     display: none;
     background: var(--gray-main);
     width: 100px;
@@ -405,19 +417,19 @@ body{
         transform: scale(1.0, 1.0);
     }
 }
-.more ul, .more2 ul{
+.more ul, .more2 ul, .more3 ul, .more4 ul, .more5 ul{
     list-style-type: none;
 }
-.more ul li, .more2 ul li{
+.more ul li, .more2 ul li, .more3 ul li, .more4 ul li, .more5 ul li{
     padding: 5px;
 }
-.more ul li:hover, .more2 ul li:hover{
+.more ul li:hover, .more2 ul li:hover, .more3 ul li:hover, .more4 ul li:hover, .more5 ul li:hover{
     cursor: pointer;
     background: var(--dark-Primary);
     transition: .5s ease-in;
     border-radius: 7px;
 }
-#closeMore, #closeMore2{
+#closeMore, #closeMore2, #closeMore3, #closeMore4, #closeMore5{
     position: absolute;
     z-index: 100;
     top: -20px;
